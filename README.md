@@ -1,1 +1,1 @@
-# CharacterRubikCube
+# Character Rubik Cube 字符魔方
