@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.scene {
+    width: 600px;
+    height: 600px;
+    perspective: 1000px;
+    cursor: grab;
+    position: relative;
+}
+
+.cube-container {
+    width: 300px;
+    height: 300px;
+    top: 150px;
+    left: 150px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: transform 1s;
+}
+
+.cube {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    transform-style: preserve-3d;
+}
+
+.face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-size: 300px 300px !important; /* 3x3 grid, each cell 100px */
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.front  { background: #fff url('https://glyphwiki.org/glyph/u82f1.svg'); }
+.back   { background: #fff url('https://glyphwiki.org/glyph/u7279.svg'); }
+.right  { background: #fff url('https://glyphwiki.org/glyph/u96c4.svg'); }
+.left   { background: #fff url('https://glyphwiki.org/glyph/u7eb3.svg'); }
+.top    { background: #fff url('https://glyphwiki.org/glyph/u8010.svg'); }
+.bottom { background: #fff url('https://glyphwiki.org/glyph/u5c14.svg'); }
+
+.front  { transform: rotateY(  0deg) translateZ(50px); }
+.back   { transform: rotateY(180deg) translateZ(50px); }
+.right  { transform: rotateY( 90deg) translateZ(50px); }
+.left   { transform: rotateY(-90deg) translateZ(50px); }
+.top    { transform: rotateX( 90deg) translateZ(50px); }
+.bottom { transform: rotateX(-90deg) translateZ(50px); }
